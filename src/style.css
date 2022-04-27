@@ -91,7 +91,7 @@ body {
   width: 700px;
 }
 
-.body-card {
+.body-card, .menu-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,6 +100,11 @@ body {
   padding: 32px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   background-color: var(--white);
+}
+
+.menu-card {
+  align-items: center;
+  gap: 4px;
 }
 
 .body-header {
@@ -119,4 +124,10 @@ body {
 
 .quote-author {
   align-self: flex-end;
+}
+
+.menu-image {
+  height: 300px;
+  width: 300px;
+  border-radius: 16px;
 }

@@ -1,28 +1,30 @@
 import createHeader from './header';
 import displayMainPage from './mainPage';
+import displayMenuPage from './menuPage';
 import displayContactUsPage from './contactUsPage';
 import './style.css';
-
-const content = document.createElement('div');
-content.id = 'content';
 
 const changeTab = (button) => {
   content.replaceChildren();
 
+  homeBtn.classList.remove('selected');
+  menuBtn.classList.remove('selected');
+  contactUsBtn.classList.remove('selected');
+
   if (button.id === 'home-btn') {
     homeBtn.classList.add('selected');
-    menuBtn.classList.remove('selected');
-    contactUsBtn.classList.remove('selected');
     displayMainPage();
   } else if (button.id === 'menu-btn') {
-
+    menuBtn.classList.add('selected');
+    displayMenuPage();
   } else {
-    homeBtn.classList.remove('selected');
-    menuBtn.classList.remove('selected');
     contactUsBtn.classList.add('selected');
     displayContactUsPage();
   }
 };
+
+const content = document.createElement('div');
+content.id = 'content';
 
 createHeader();
 
