@@ -23,7 +23,7 @@ const createHeroBanner = () => {
   heroContainer.append(heroImg, heroTextContainer);
 
   return heroContainer;
-}
+};
 
 const createQuoteCard = () => {
   const quoteText = document.createElement('div');
@@ -41,7 +41,7 @@ const createQuoteCard = () => {
   quoteCard.append(quoteText, quoteAuthor);
 
   return quoteCard;
-}
+};
 
 const createHoursCard = () => {
   const hoursHeader = document.createElement('h2');
@@ -58,7 +58,7 @@ const createHoursCard = () => {
   hoursCard.append(hoursHeader, hoursText);
 
   return hoursCard;
-}
+};
 
 const createLocationCard = () => {
   const locationHeader = document.createElement('h2');
@@ -74,7 +74,7 @@ const createLocationCard = () => {
   locationCard.append(locationHeader, locationText);
 
   return locationCard;
-}
+};
 
 const createBody = () => {
   const quoteCard = createQuoteCard();
@@ -86,15 +86,15 @@ const createBody = () => {
   bodyContainer.append(quoteCard, hoursCard, locationCard);
   
   return bodyContainer;
-}
+};
 
-const createMainPage = () => {
+const displayMainPage = () => {
   const content = document.querySelector('#content');
 
   const heroBanner = createHeroBanner();
   const body = createBody();
 
   content.append(heroBanner, body);
-}
+};
 
-export default createMainPage;
+export default displayMainPage;
